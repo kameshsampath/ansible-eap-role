@@ -2,6 +2,6 @@
 
 - name: install java
   yum: 
-    name: "java-{{openjdk_version}}-openjdk-headless"
+    name: "{{openjdk_package}}"
     state: present
   tags: [java]

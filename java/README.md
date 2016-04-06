@@ -1,7 +1,7 @@
 Java
 =========
 
-A role to install OpenJDK in headless mode
+A role to install OpenJDK as JDK or JRE
 
 Requirements
 ------------
@@ -11,7 +11,8 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-* `openjdk_version` - the JDK version to install, defaults to 1.8.0
+* `openjdk_version` - The JDK version to install, defaults to 1.8.0
+* `openjdk_package` - The rhel7 java package name, defaults to `java-1.8.0-openjdk-headless`
 
 
 Example Playbook
@@ -21,7 +22,7 @@ When you want to install OpenJDK 1.8 as part of your playbook, include this role
 
     - hosts: eap
       roles:
-         - { role: java, openjdk_version: '1.8.0' }
+         - { role: java, openjdk_version: '1.8.0'  openjdk_package: "java-{{openjdk_version}}-openjdk-headless"}
 
 License
 -------
