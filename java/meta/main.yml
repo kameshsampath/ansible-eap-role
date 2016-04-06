@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: RH Consulting
+  description: Role to install OpenJDK
+  company: Red Hat
+  license: license (Apache)
+  min_ansible_version: 1.8
+  platforms:
+   - name: EL
+     versions:
+     - 7
+  categories:
+   - java
+  
